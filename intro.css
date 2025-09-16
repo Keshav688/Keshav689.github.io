@@ -1,4 +1,4 @@
-/* Reset default browser styles and set box-sizing for consistent layout */
+/* Reset default browser styles and set box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@ body {
 
 /* Logo image inside navbar */
 .logo {
-  height: 60px; /* Fixed height for logo */
+  height: 70px; /* Fixed height for logo */
 }
 
 /* Container for navigation links */
@@ -48,43 +48,97 @@ body {
   text-decoration: underline; /* Add underline on hover */
 }
 
-/* Section heading for audio content */
+/* Heading section for audio content */
 .heading-audio {
   text-align: center; /* Centered text */
   margin-bottom: 40px; /* Space below heading */
 }
 
-/* Audio heading text */
 .heading-audio h3 {
-  font-size: 28px; /* Large font size */
-  color: rgb(0, 90, 156); /* Deep blue color */
+  font-size: 28px; /* Large heading */
+  color: rgb(0, 90, 156); /* Deep blue text */
+  margin-bottom: 15px; /* Space below heading */
+}
+
+/* Main content container */
+.content {
+  background-color: rgb(255, 255, 255); /* White background */
+  padding: 40px; /* Inner spacing */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 1000px; /* Limit width */
+  margin: 0 auto; /* Center horizontally */
+  box-shadow: 0 4px 12px black; /* Stronger shadow (overrides previous) */
+}
+
+/* Paragraphs inside content */
+.content p {
+  font-size: 17px; /* Readable font size */
+  margin-bottom: 30px; /* Space below paragraphs */
+  line-height: 1.8; /* Comfortable line spacing */
+}
+
+/* Row of images */
+.image-row {
+  display: flex; /* Horizontal layout */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 30px; /* Space between images */
+  justify-content: center; /* Center images */
+  margin-top: 30px; /* Space above image row */
+}
+
+/* Individual image container */
+.image-box {
+  flex: 1 1 300px; /* Responsive sizing */
+  text-align: center; /* Center image and caption */
+}
+
+/* Image styling */
+.image-box img {
+  width: 100%; /* Full width of container */
+  max-width: 4000px; /* Prevent overly large images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Caption below image */
+.caption {
+  font-size: 14px; /* Small font size */
+  color: rgb(102, 102, 102); /* Light gray text */
+  margin-top: -150px; /* Pull caption upward (may need adjustment) */
+}
+
+/* Heading section for video content */
+.heading-video {
+  flex: 1 1 640px; /* Responsive sizing */
+  text-align: center; /* Centered text */
+}
+
+.heading-video h3 {
+  font-size: 20px; /* Medium heading */
+  color: rgb(0, 90, 156); /* Deep blue text */
+  margin-bottom: 10px; /* Space below heading */
 }
 
 /* Responsive styles for smaller screens */
-/* Apply styles only when the screen width is 768px or less (e.g., tablets and phones) */
 @media (max-width: 768px) {
-
-  /* Navbar container: stack items vertically and align them to the left */
   .navbar {
-    flex-direction: column;/* Change layout from horizontal to vertical */
-    align-items: flex-start;/* Align items to the start of the container */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
   }
 
-  /* Navigation links: display links in a vertical list with spacing */
   .nav-links {
-    flex-direction: column;/* Stack links vertically */
-    gap: 10px;/* Add space between each link */
-    margin-top: 15px;/* Add space above the links */
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Smaller gap between links */
+    margin-top: 15px; /* Space above links */
   }
 
-  /* Image row: stack images vertically and center them horizontally */
   .image-row {
-    flex-direction: column;/* Arrange images in a column */
-    align-items: center;/* Center images horizontally */
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images */
   }
 
-  /* Content section: add padding for better readability on small screens */
   .content {
-    padding: 20px;/* Add space around the content */
+    padding: 20px; /* Reduce padding for smaller screens */
   }
 }
